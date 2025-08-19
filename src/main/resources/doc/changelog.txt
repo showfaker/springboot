@@ -1,0 +1,69 @@
+[version] 1.2.3.1.200825.beta
+[Released] 
+
+[New module & refactors]
+1. upgrade spring-boot-starter-parent from 2.2.1.RELEASE to 2.3.2.RELEASE
+2. upgrade mongodb-driver to 3.12.7
+
+[Function improvements]
+1. 将jasypt.encryptor.password配置改放到Application.java中
+2. monitor表增加day_run_status字段
+
+[Bug Fixes]
+1. distr服务中按时间过滤高频数据时，如果是遥信量，需要先判断值是否有变化，有变化的不考虑时间间隔
+
+[Known issues]
+
+[upgrade info]
+
+------------------------------------------------------------------------------
+
+[version] 1.1.2.0.200621.release
+[Released] 2020-06-22
+
+[New module & refactors]
+1. 添加公式计算拓扑
+
+[Function improvements]
+
+[Bug Fixes]
+
+[Known issues]
+
+[upgrade info]
+1. 修改app_parameter的nemsTopology参数，在param1中加入"cie.expression-calc.topic-prefix":"nems-expression-calc",
+2. 在calc_topo_cfg表配置expression计算拓扑
+3. application-xxx.yml文件增加配置cie.app.debug.expression-calc: false
+
+------------------------------------------------------------------------------
+
+[version] 1.2.0.200510
+[Released] 2020-05-10
+
+[Features]
+1. 程序启动时自动从changelog.txt读取最新版本号
+
+[Bug Fixes]
+
+[code optimization]
+2. 规范和优化各缓存Controller内swagger注释，解决打开swagger.html页面时报错的问题
+
+[Known issues]
+
+------------------------------------------------------------------------------
+
+[version] 1.1.0.200502
+[Released] 2020-05-02
+
+[Features]
+
+[Bug Fixes]
+1. 发现station_monitor_real表和job_record表存储数据不一致的情况。
+	在定时任务MoveMonitorRealToHisJob将station_monitor_real表数据转移到his表时，
+	energy_input字段改为从job_record表关联获取值，解决job_record保存时由于未知原因未同步到real表的问题。
+	同时增加从job_record表生成real表中没有的电站的数据的能力。
+
+[code optimization]
+
+[Known issues]
+

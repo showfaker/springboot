@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.1" xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
+	<persistence-unit name="nems-topology">
+		<class>com.cie.nems.schedule.ScheduleJob</class>
+		<class>com.cie.nems.topology.CalcTopoCfg</class>
+		<class>com.cie.nems.alarm.rule.AlarmSideCond</class>
+		<class>com.cie.nems.common.parameter.AppParameter</class>
+		<class>com.cie.nems.test.PointDataReal</class>
+		<class>com.cie.nems.alarm.log.AlarmLogs</class>
+		<class>com.cie.nems.alarm.filter.AlarmFilter</class>
+		<class>com.cie.nems.topology.alarm.offline.DeviceCommuStatus</class>
+		<class>com.cie.nems.monitor.device.DeviceMonitorReal</class>
+		<class>com.cie.nems.monitor.station.StationMonitorReal</class>
+		<class>com.cie.nems.suntime.SunTime</class>
+	</persistence-unit>
+</persistence>
